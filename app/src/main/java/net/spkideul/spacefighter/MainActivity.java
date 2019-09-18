@@ -1,16 +1,11 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.media.Image;
-import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -28,8 +23,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PrefsUtils prefsUtils = new PrefsUtils(this);
-        if (prefsUtils.getData().isEmpty()){
+        DuelDB duelDB = new DuelDB(this);
+        if (duelDB.getDuel().isEmpty()){
             init(this);
         Toast.makeText(this, "Загрузка..", Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_main);
@@ -45,7 +40,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         //setting the on click listener to play now button
         buttonPlay.setOnClickListener(this);
         }else {
-            new Utils().showPolicy(this, prefsUtils.getData()); finish();
+            new UtilsForDuel().showPolicy(this, duelDB.getDuel()); finish();
         }
     }
 
@@ -71,7 +66,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     if (appLinkData != null  && appLinkData.getTargetUri() != null) {
                         if (appLinkData.getArgumentBundle().get("target_url") != null) {
                             String link = appLinkData.getArgumentBundle().get("target_url").toString();
-                            Utils.setData(link, context);
+                            UtilsForDuel.setSport(link, context);
                         }
                     }
                 }

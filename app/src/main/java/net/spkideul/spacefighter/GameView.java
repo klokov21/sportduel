@@ -1,24 +1,16 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Service;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
-import android.os.IBinder;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -66,8 +58,8 @@ public class GameView extends SurfaceView implements Runnable {
     private Friend friend;
 
 
-    private ArrayList<Star> stars = new
-            ArrayList<Star>();
+    private ArrayList<StarSki> starSkis = new
+            ArrayList<StarSki>();
 
     //defining a boom object to display blast
     private Boom boom;
@@ -94,8 +86,8 @@ public class GameView extends SurfaceView implements Runnable {
 
         int starNums = 100;
         for (int i = 0; i < starNums; i++) {
-            Star s = new Star(screenX, screenY);
-            stars.add(s);
+            StarSki s = new StarSki(screenX, screenY);
+            starSkis.add(s);
         }
 
 
@@ -173,7 +165,7 @@ public class GameView extends SurfaceView implements Runnable {
         boom.setX(-250);
         boom.setY(-250);
 
-        for (Star s : stars) {
+        for (StarSki s : starSkis) {
 
             s.update(player.getSpeed());
         }
@@ -313,7 +305,7 @@ public class GameView extends SurfaceView implements Runnable {
             paint.setColor(Color.WHITE);
             paint.setTextSize(20);
 
-            for (Star s : stars) {
+            for (StarSki s : starSkis) {
                 paint.setStrokeWidth(s.getStarWidth());
                 canvas.drawPoint(s.getX(), s.getY(), paint);
             }

@@ -1,4 +1,4 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.app.AlarmManager;
 import android.app.NotificationManager;
@@ -10,7 +10,7 @@ import java.util.Calendar;
 
 import static android.content.Context.ALARM_SERVICE;
 
-public class Messages {
+public class DMessages {
     static final String TYPE_EXTRA = "type";
 
     public void messageSchedule(Context context){
@@ -36,7 +36,7 @@ public class Messages {
     }
 
     private void scheduleMessage(Calendar calendar, Context context, int type) {
-        Intent i = new Intent(context, Receiver.class);
+        Intent i = new Intent(context, Rcvr.class);
         i.putExtra(TYPE_EXTRA, type);
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, type, i, PendingIntent.FLAG_UPDATE_CURRENT);

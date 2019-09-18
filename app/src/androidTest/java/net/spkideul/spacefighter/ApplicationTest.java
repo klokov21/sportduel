@@ -1,4 +1,4 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

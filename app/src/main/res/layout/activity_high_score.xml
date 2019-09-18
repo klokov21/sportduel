@@ -7,7 +7,7 @@
     android:gravity="center_horizontal"
     android:paddingTop="150dp"
     android:orientation="vertical"
-    tools:context="net.simplifiedcoding.spacefighter.HighScore"
+    tools:context="net.spkideul.spacefighter.HighScore"
     android:background="@drawable/splash">
 
     <TextView

@@ -1,11 +1,11 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import java.util.Random;
 
 /**
- * Created by Belal on 6/15/2016.
+ * Created by Pusia on 6/15/2016.
  */
-public class Star {
+public class StarSki {
     private int x;
     private int y;
     private int speed;
@@ -17,7 +17,7 @@ public class Star {
 
 
 
-    public Star(int screenX, int screenY) {
+    public StarSki(int screenX, int screenY) {
         maxX = screenX;
         maxY = screenY;
         minX = 0;

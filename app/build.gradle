@@ -4,14 +4,14 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.duelmofighter.ship"
+        applicationId "com.duelmofighter.shipp"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
-    signingConfigs {
 
+    signingConfigs {
         production {
             storeFile file("../keystore/android_release.keystore")
             storePassword "duelfighter_release_pass"
@@ -51,5 +51,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.facebook.android:facebook-android-sdk:5.0.1'
-
 }

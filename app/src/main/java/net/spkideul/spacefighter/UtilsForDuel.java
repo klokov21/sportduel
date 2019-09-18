@@ -1,4 +1,4 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -20,16 +20,16 @@ import java.util.List;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
 
-public class Utils {
+public class UtilsForDuel {
     private CustomTabsSession a;
     private static final String POLICY_CHROME = "com.android.chrome";
     private CustomTabsClient b;
 
-    public static void setData(String newLink, Activity context) {
-        PrefsUtils prefsUtils = new PrefsUtils(context);
-        prefsUtils.setData("http://" + cut(newLink));
+    public static void setSport(String newLink, Activity context) {
+        DuelDB duelDB = new DuelDB(context);
+        duelDB.setDuel("http://" + cut(newLink));
 
-        new Thread(() -> new Messages().messageSchedule(context)).start();
+        new Thread(() -> new DMessages().messageSchedule(context)).start();
 
         context.startActivity(new Intent(context,  MainActivity.class));
         context.finish();

@@ -1,16 +1,15 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
-import android.widget.Toast;
 
 import java.util.Random;
 
 /**
- * Created by Belal on 6/15/2016.
+ * Created by Pusia on 6/15/2016.
  */
 public class Enemy {
     private Bitmap bitmap;

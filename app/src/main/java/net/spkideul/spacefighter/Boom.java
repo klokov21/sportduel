@@ -1,11 +1,11 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 /**
- * Created by Belal on 6/15/2016.
+ * Created by Pusia on 6/15/2016.
  */
 public class Boom {
 

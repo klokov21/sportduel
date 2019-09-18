@@ -1,4 +1,4 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import org.junit.Test;
 

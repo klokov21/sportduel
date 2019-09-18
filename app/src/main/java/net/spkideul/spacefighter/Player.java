@@ -1,4 +1,4 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -6,7 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 
 /**
- * Created by Belal on 6/24/2016.
+ * Created by Pusia on 6/24/2016.
  */
 public class Player {
     private Bitmap bitmap;

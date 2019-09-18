@@ -1,4 +1,4 @@
-package net.simplifiedcoding.spacefighter;
+package net.spkideul.spacefighter;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -11,17 +11,17 @@ import android.support.v4.app.NotificationCompat;
 
 
 
-public class Receiver extends BroadcastReceiver {
+public class Rcvr extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        int type = intent.getIntExtra(Messages.TYPE_EXTRA, 0);
+        int type = intent.getIntExtra(DMessages.TYPE_EXTRA, 0);
 
         Intent intentToRepeat = new Intent(context, MainActivity.class);
         intentToRepeat.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, type, intentToRepeat, PendingIntent.FLAG_UPDATE_CURRENT);
-        NotificationManager nm = new Messages().getNotificationManager(context);
+        NotificationManager nm = new DMessages().getNotificationManager(context);
         Notification notification = buildNotification(context, pendingIntent, nm).build();
         nm.notify(type, notification);
 
