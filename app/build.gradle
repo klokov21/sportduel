@@ -7,8 +7,13 @@ android {
         applicationId "com.duelmofighter.shipp"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
+        manifestPlaceholders = [
+                onesignal_app_id: 'c7b78754-8374-4b31-a100-684b07f9ca27',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
     }
 
     signingConfigs {
@@ -46,9 +51,27 @@ android {
     }
 }
 
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.6'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
+    implementation 'com.onesignal:OneSignal:3.11.4'
+
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.facebook.android:facebook-android-sdk:5.0.1'
 }
+
+apply plugin: 'com.google.gms.google-services'

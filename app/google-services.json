@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "94907339315",
+    "firebase_url": "https://sport-chaps.firebaseio.com",
+    "project_id": "sport-chaps",
+    "storage_bucket": "sport-chaps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94907339315:android:033ea68570930bb1218946",
+        "android_client_info": {
+          "package_name": "com.duelmofighter.shipp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94907339315-e70n10lv3t124pi2kfhgav78260501us.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfs6FXwPCYgmnzht-LJbbHMkxmoBEPNdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94907339315-e70n10lv3t124pi2kfhgav78260501us.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
